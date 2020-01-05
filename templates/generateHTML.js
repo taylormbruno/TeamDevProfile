@@ -62,19 +62,19 @@ const fs = require("fs");
 
 async function generateHTML(role, office, user, end) {
     if (role === "Manager") {
-        await fs.appendFile(`../office${office}.html`, startHTML, 'utf8', (err) => {
+        await fs.appendFile(`./office${office}.html`, startHTML, 'utf8', (err) => {
             if (err) throw err; 
             console.log(`\n Created HTML: office${office}.html`);
         });
     }
 
-    fs.appendFile(`../office${office}.html`, user, 'utf8', (err) => {
+    fs.appendFile(`./office${office}.html`, user, 'utf8', (err) => {
         if (err) throw err; 
         console.log(`\n Added: ${role} to office${office}.html`);
     });
 
     if (end === "No") {
-        fs.appendFile(`../office${office}.html`, endHTML, 'utf8', (err) => {
+        fs.appendFile(`./office${office}.html`, endHTML, 'utf8', (err) => {
             if (err) throw err; 
             console.log(`\n HTML: office${office}.html is complete`);
         });
