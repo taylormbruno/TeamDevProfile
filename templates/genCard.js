@@ -1,8 +1,8 @@
-function managerHTML(name, id, email, officeNum) {
+function genCard(role, icon, name, id, email, vType, varies) {
     return `<div class="card bg-light mb-3" style="max-width:18rem">
     <div class="card-header" style="background-color:#0077F7; color:white;">
         <h3>${name}</h3>
-        <i class="fas fa-mug-hot"></i> Manager
+        ${icon} ${role}
     </div>
     <div class="card-body">
         <div class="border border-secondary" style="border-radius: 3%; padding: 5px;">
@@ -20,7 +20,7 @@ function managerHTML(name, id, email, officeNum) {
                     </tr>
                     <tr>
                         <td>
-                            Office Number: ${officeNum}
+                            ${vType}: ${varies}
                         </td>
                     </tr>
                 </tbody>
@@ -30,4 +30,4 @@ function managerHTML(name, id, email, officeNum) {
 </div>`
 }
 
-module.exports = managerHTML;
+module.exports = genCard;
