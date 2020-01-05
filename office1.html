@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style> 
+        .header {
+            background-color: rgb(215, 84, 89) !important; 
+            height: 20vh; 
+            width: 100%; 
+            padding: 6% 0% 10% 0%;
+        }
+        #cardWrap {
+            padding-top: 20px;
+            width: 100vw;
+            height: 80vh;
+            text-align: center;
+        }
+        .card {
+            width: 27vw !important;
+            display: inline-block !important;
+            text-align: justify !important;
+        }
+        .card-body {
+            overflow-y: auto !important;
+            max-height: 20vh !important;
+        }
+        .card-header {
+            background-color:#0077F7 !important; 
+            color:white;
+        }
+        .cardBod {
+            border-radius: 3%; 
+            padding: 5px;
+            overflow-x: auto;
+            height: 15vh;
+        }
+    </style>
+
+    <script src="https://kit.fontawesome.com/d528fd69d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="header text-center text-white" style="background-color: rgb(215, 84, 89); height: 20vh; width: 100%; padding: 6% 0% 10% 0%;">
+        <h1>My Team</h1>
+    </div>
+    <div class="container" id="cardWrap">
+    <div class="card bg-light mb-3">
+        <div class="card-header">
+            <h3>bob</h3>
+            <i class='fas fa-mug-hot'></i> Manager
+        </div>
+        <div class="card-body">
+            <div class="border border-secondary cardBody">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>ID: 1</td>
+                        </tr>
+                        <tr>
+                            <td>Email: <a href="bob@mail.com">bob@mail.com</a></td>
+                        </tr>
+                        <tr>
+                            <td>Office Number: 1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="card bg-light mb-3">
+        <div class="card-header">
+            <h3>Steve</h3>
+            <i class='fas fa-glasses'></i> Engineer
+        </div>
+        <div class="card-body">
+            <div class="border border-secondary cardBody">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>ID: 2</td>
+                        </tr>
+                        <tr>
+                            <td>Email: <a href="steve@mail.com">steve@mail.com</a></td>
+                        </tr>
+                        <tr>
+                            <td>GitHub: steveHub</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="card bg-light mb-3">
+        <div class="card-header">
+            <h3>Rick</h3>
+            <i class='fas fa-glasses'></i> Engineer
+        </div>
+        <div class="card-body">
+            <div class="border border-secondary cardBody">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>ID: 3</td>
+                        </tr>
+                        <tr>
+                            <td>Email: <a href="rick@mail.com">rick@mail.com</a></td>
+                        </tr>
+                        <tr>
+                            <td>GitHub: rickHub</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="card bg-light mb-3">
+        <div class="card-header">
+            <h3>Tom</h3>
+            <i class='fas fa-user-graduate'></i> Intern
+        </div>
+        <div class="card-body">
+            <div class="border border-secondary cardBody">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>ID: 4</td>
+                        </tr>
+                        <tr>
+                            <td>Email: <a href="tom@mail.com">tom@mail.com</a></td>
+                        </tr>
+                        <tr>
+                            <td>School: UNC-Charlotte</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="card bg-light mb-3">
+        <div class="card-header">
+            <h3>Joe</h3>
+            <i class='fas fa-glasses'></i> Engineer
+        </div>
+        <div class="card-body">
+            <div class="border border-secondary cardBody">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>ID: 5</td>
+                        </tr>
+                        <tr>
+                            <td>Email: <a href="joe@mail.com">joe@mail.com</a></td>
+                        </tr>
+                        <tr>
+                            <td>GitHub: joeHub</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

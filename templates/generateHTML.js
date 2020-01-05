@@ -5,15 +5,50 @@ const startHTML = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <style> 
+        .header {
+            background-color: rgb(215, 84, 89) !important; 
+            height: 20vh; 
+            width: 100%; 
+            padding: 6% 0% 10% 0%;
+        }
+        #cardWrap {
+            padding-top: 20px;
+            width: 100vw;
+            height: 80vh;
+            text-align: center;
+        }
+        .card {
+            width: 27vw !important;
+            display: inline-block !important;
+            text-align: justify !important;
+        }
+        .card-body {
+            overflow-y: auto !important;
+            max-height: 20vh !important;
+        }
+        .card-header {
+            background-color:#0077F7 !important; 
+            color:white;
+        }
+        .cardBod {
+            border-radius: 3%; 
+            padding: 5px;
+            overflow-x: auto;
+            height: 15vh;
+        }
+    </style>
+
     <script src="https://kit.fontawesome.com/d528fd69d4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
 </head>
 <body>
     <div class="header text-center text-white" style="background-color: rgb(215, 84, 89); height: 20vh; width: 100%; padding: 6% 0% 10% 0%;">
         <h1>My Team</h1>
     </div>
-    <div class="container text-center" id="cardWrap">`;
+    <div class="container" id="cardWrap">
+    `;
 
 const endHTML = `</div>
     
@@ -25,23 +60,23 @@ const endHTML = `</div>
 
 const fs = require("fs");
 
-function generateHTML(role, office, user, end) {
-    if (role === "manager") {
-        fs.appendFile(`office${office}.html`, startHTML, 'utf8', (err) => {
+async function generateHTML(role, office, user, end) {
+    if (role === "Manager") {
+        await fs.appendFile(`../office${office}.html`, startHTML, 'utf8', (err) => {
             if (err) throw err; 
-            console.log("Created html");
+            console.log(`\n Created HTML: office${office}.html`);
         });
     }
 
-    fs.appendFile(`office${office}.html`, user, 'utf8', (err) => {
+    fs.appendFile(`../office${office}.html`, user, 'utf8', (err) => {
         if (err) throw err; 
-        console.log("Created html");
+        console.log(`\n Added: ${role} to office${office}.html`);
     });
 
     if (end === "No") {
-        fs.appendFile(`office${office}.html`, endHTML, 'utf8', (err) => {
+        fs.appendFile(`../office${office}.html`, endHTML, 'utf8', (err) => {
             if (err) throw err; 
-            console.log("Created html");
+            console.log(`\n HTML: office${office}.html is complete`);
         });
     } 
 }

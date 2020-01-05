@@ -1,9 +1,8 @@
 const inquirer = require("inquirer");
-const util = require("util");
 
 // used to generate HTML page
-const genCard = require("./templates/genCard");
-const generateHTML = require("./templates/generateHTML");
+const genCard = require("./genCard");
+const generateHTML = require("./generateHTML");
 
 // icons used for each role
 const mgrIcon = "<i class='fas fa-mug-hot'></i>";
@@ -93,7 +92,7 @@ async function genEng(officeNum) {
     }
 }
 
-async function genInt() {
+async function genInt(officeNum) {
     const int = await inquirer.prompt([
         {
             type: "input",
@@ -104,7 +103,7 @@ async function genInt() {
 
     let newInt = (int.intern).split(' ');
     //create html card
-    let iCard = genCard("Intern", intIcon, newInt[0], newInt[1], newInt[2], "GitHub", newInt[3]);
+    let iCard = genCard("Intern", intIcon, newInt[0], newInt[1], newInt[2], "School", newInt[3]);
     let endQ = await inquirer.prompt([
         {
             type: "list",
